@@ -1,0 +1,16 @@
+drone_options:
+- initial: true
+  name: IDLE
+  value: idle
+- initial: false
+  name: Drone is starting to take off
+  value: Take off
+- initial: false
+  name: Drone is flying
+  value: Flying
+- initial: false
+  name: Drone is landing
+  value: Landing
+- initial: false
+  name: Warning! Conditional landing procedure
+  value: Conditional Landing
