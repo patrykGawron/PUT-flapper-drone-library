@@ -7,10 +7,10 @@ drone_options:
   value: Take off
 - initial: false
   name: Drone is flying
-  value: Flying
+  value: Suspension
 - initial: false
   name: Drone is landing
   value: Landing
 - initial: false
-  name: Warning! Conditional landing procedure
-  value: Conditional Landing
+  name: Warning! Emergency landing procedure
+  value: Emergency Landing

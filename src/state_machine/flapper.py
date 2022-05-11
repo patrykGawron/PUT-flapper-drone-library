@@ -31,7 +31,7 @@ drone_from_to = from_to["drone_from_to"]
 drone_states, drone_transitions = setTransition(drone_from_to, drone_states, clbck)
 
 
-def create_and_show_graph(graph, states, edges, ax, color, current=""):
+def create_and_show_graph(graph, states, edges, color, current=""):
     plt.cla()
     # nodes are int ids, since from_to is defined in terms of 0 -> 1 etc.
     i = 0
@@ -55,28 +55,28 @@ def create_and_show_graph(graph, states, edges, ax, color, current=""):
             graph.add_edge(from_node, to_node)
 
     pos = nx.shell_layout(graph)
-    nx.draw(graph, pos, with_labels=False, ax=ax, connectionstyle='arc3, rad = 0.1', node_color=colors, alpha=0.75)
+    nx.draw(graph, pos, with_labels=False, connectionstyle='arc3, rad = 0.1', node_color=colors, alpha=0.75)
 
     # offset labels along y axis so they are above nodes
     pos_higher = {}
     y_off = 0.15
     for k, v in pos.items():
         pos_higher[k] = (v[0], v[1] + y_off)
-    nx.draw_networkx_labels(graph, pos_higher, labels, ax=ax)
+    nx.draw_networkx_labels(graph, pos_higher, labels)
 
     # interactive mode so plt.show() is non-blocking
     plt.ion()
     plt.show()
 
-fig, axs = plt.subplots(1, 2)
-colors = ["green", "blue"]
-print(axs)
+# fig, axs = plt.subplots(1, 2)
+colors = ["green", "blue", "yellow"]
+# print(axs)
 
 def redraw(curr_drone=""):
-    create_and_show_graph(drone_graph, drone_options, drone_from_to, axs[0], colors[0], curr_drone)
+    create_and_show_graph(drone_graph, drone_options, drone_from_to, colors[0], curr_drone)
 
 for i in range(2):
-    create_and_show_graph(drone_graph, drone_options, drone_from_to, axs[0], colors[i%2])
+    create_and_show_graph(drone_graph, drone_options, drone_from_to, colors[i%2])
     plt.pause(0.1)
 
 def main():
