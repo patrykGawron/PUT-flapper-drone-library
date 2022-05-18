@@ -1,16 +1,22 @@
 drone_options:
 - initial: true
   name: IDLE
-  value: idle
+  value: LANDED
 - initial: false
   name: Drone is starting to take off
-  value: Take off
+  value: Taking off
 - initial: false
-  name: Drone is flying
-  value: Suspension
+  name: Drone is hovering
+  value: Hovering
 - initial: false
   name: Drone is landing
   value: Landing
+- initial: false
+  name: Warning!
+  value: Emergency
+- initial: false
+  name: Drone is flying
+  value: Flight
 - initial: false
   name: Warning! Emergency landing procedure
   value: Emergency Landing

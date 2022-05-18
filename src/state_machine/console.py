@@ -39,9 +39,12 @@ def console_interface(drone, drone_transitions, drone_from_to, redraw):
     pause = "---------------------------------------------------------------------------------------------------------------------"
     print(pause)
     print("FLAPPER DRONE :)")
+
     error = "Try again, probably the value you wrote down was incorect"
 
     state_machines = [drone]
+    # machine = state_machines[0]
+    # print(f'{machine.name} current state: {machine.current_state}')
 
     while True:
         print(pause)
@@ -73,37 +76,66 @@ def testing(drone, drone_transitions, drone_from_to, redraw):
     print(pause)
     state_machines = [drone]
 
-    answers = [("Waiting", "idle", "idle"),
-               ("Palletizing", "idle", "idle"),
-               ("Palletizing", "Arrival", "idle"),
-               ("Palletizing", "Product ready", "idle"),
-               ("Palletizing", "Product ready", "Moving"),
-               ("Palletizing", "Product ready", "Latch"),
-               ("Palletizing", "Product ready", "Product up"),
-               ("Palletizing", "Product ready", "Latch"),
-               ("Palletizing", "Product ready", "Product up"),
-               ("Palletizing", "Product ready", "Moving"),
-               ("Palletizing", "Product ready", "Gripper open"),
-               ("Palletizing", "Product ready", "Released"),
-               ("Palletizing", "Product ready", "Gripper open"),
-               ("Palletizing", "Product ready", "Released"),
-               ("Palletizing", "Product ready", "idle"),
-               ("Palletizing", "Product up", "idle"),
-               ("Palletizing", "Arrival", "idle"),
-               ("Palletizing", "Product ready", "idle"),
-               ("Palletizing", "Product up", "idle"),
-               ("Palletizing", "idle", "idle"),
-               ("Exit", "idle", "idle"),
-               ("idle", "idle", "idle")]
+    answers = [("Taking off"),
+               ("Hovering"),
+               ("Landing"),
+               ("LANDED"),
+               ("Taking off"),
+               ("Hovering"),
+               ("Flight"),
+               ("Hovering"),
+               ("Flight"),
+               ("Emergency Landing"),
+               ("LANDED"),
+               ("Emergency"),
+               ("Emergency Landing"),
+               ("LANDED"),
+               ("Taking off"),
+               ("Hovering"),
+               ("Emergency"),
+               ("Emergency Landing"),
+               ("LANDED"),
+               ("Taking off"),
+               ("Hovering"),
+               ("Emergency Landing"),
+               ("LANDED"),
+               ("Taking off"),
+               ("Hovering"),
+               ("Flight"),
+               ("Emergency"),
+               ("Emergency Landing"),
+               ("LANDED")]
 
 
     path = [("drone", "transition_0_1"),
             ("drone", "transition_1_2"),
             ("drone", "transition_2_3"),
-            ("drone", "transition_2_4"),
-            ("drone", "transition_3_1"),
             ("drone", "transition_3_0"),
-            ("drone", "transition_4_0")]
+            ("drone", "transition_0_1"),
+            ("drone", "transition_1_2"),
+            ("drone", "transition_2_5"),
+            ("drone", "transition_5_2"),
+            ("drone", "transition_2_5"),
+            ("drone", "transition_5_6"),
+            ("drone", "transition_6_0"),
+            ("drone", "transition_0_4"),
+            ("drone", "transition_4_6"),
+            ("drone", "transition_6_0"),
+            ("drone", "transition_0_1"),
+            ("drone", "transition_1_2"),
+            ("drone", "transition_2_4"),
+            ("drone", "transition_4_6"),
+            ("drone", "transition_6_0"),
+            ("drone", "transition_0_1"),
+            ("drone", "transition_1_2"),
+            ("drone", "transition_2_6"),
+            ("drone", "transition_6_0"),
+            ("drone", "transition_0_1"),
+            ("drone", "transition_1_2"),
+            ("drone", "transition_2_5"),
+            ("drone", "transition_5_4"),
+            ("drone", "transition_4_6"),
+            ("drone", "transition_6_0")]
 
     for step, ans in zip(path, answers):
         name, t = step
