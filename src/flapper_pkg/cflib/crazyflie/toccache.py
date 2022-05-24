@@ -33,8 +33,8 @@ import logging
 import os
 from glob import glob
 
-from .log import LogTocElement  # noqa
-from .param import ParamTocElement  # noqa
+from flapper_pkg.cflib.crazyflie.log import LogTocElement  # noqa
+from flapper_pkg.cflib.crazyflie.param import ParamTocElement  # noqa
 
 __author__ = 'Bitcraze AB'
 __all__ = ['TocCache']

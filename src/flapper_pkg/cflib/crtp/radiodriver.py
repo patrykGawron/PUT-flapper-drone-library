@@ -50,8 +50,8 @@ from typing import Tuple
 from typing import Union
 
 import flapper_pkg.cflib.drivers.crazyradio as crazyradio
-from .crtpstack import CRTPPacket
-from .exceptions import WrongUriType
+from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
+from flapper_pkg.cflib.crtp.exceptions import WrongUriType
 from flapper_pkg.cflib.crtp.crtpdriver import CRTPDriver
 from flapper_pkg.cflib.drivers.crazyradio import Crazyradio
 

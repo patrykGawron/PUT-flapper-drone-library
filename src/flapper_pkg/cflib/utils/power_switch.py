@@ -25,7 +25,7 @@ a Crazyradio.
 """
 import time
 
-import flapper_pkg.cflib.crtp
+import flapper_pkg.cflib.crtp as cflib_crtp
 from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
 from flapper_pkg.cflib.crtp.radiodriver import RadioManager
 
@@ -38,10 +38,10 @@ class PowerSwitch:
     def __init__(self, uri):
         self.uri = uri
         uri_augmented = uri+'?safelink=0&autoping=0&ackfilter=0'
-        self.link = cflib.crtp.get_link_driver(uri_augmented)
+        self.link = cflib_crtp.get_link_driver(uri_augmented)
         # Switch to legacy mode, if uri options are not available or old Python backend is used
         if not self.link or self.link.get_name() == 'radio':
-            uri_parts = cflib.crtp.RadioDriver.parse_uri(uri)
+            uri_parts = cflib_crtp.RadioDriver.parse_uri(uri)
             self.devid = uri_parts[0]
             self.channel = uri_parts[1]
             self.datarate = uri_parts[2]

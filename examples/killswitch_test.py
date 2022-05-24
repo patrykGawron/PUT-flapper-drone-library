@@ -4,7 +4,7 @@ import sys
 import time
 import csv
 import threading as th
-import flapper_pkg.cflib.crtp
+import flapper_pkg.cflib.crtp as cflib_crtp
 from flapper_pkg.cflib.crazyflie import Crazyflie
 from flapper_pkg.cflib.crazyflie.log import LogConfig
 from flapper_pkg.cflib.crazyflie.syncCrazyflie import SyncCrazyflie
@@ -85,6 +85,6 @@ class FlapperController:
 
 
 if __name__ == '__main__':
-    cflib.crtp.init_drivers()
+    cflib_crtp.init_drivers()
     flapper = FlapperController()
     flapper.main_process()

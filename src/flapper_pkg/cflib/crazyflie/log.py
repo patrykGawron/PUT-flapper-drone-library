@@ -64,8 +64,8 @@ import errno
 import logging
 import struct
 
-from .toc import Toc
-from .toc import TocFetcher
+from flapper_pkg.cflib.crazyflie.toc import Toc
+from flapper_pkg.cflib.crazyflie.toc import TocFetcher
 from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
 from flapper_pkg.cflib.crtp.crtpstack import CRTPPort
 from flapper_pkg.cflib.utils.callbacks import Caller

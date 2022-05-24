@@ -40,17 +40,17 @@ from threading import Lock
 from threading import Thread
 from threading import Timer
 
-import flapper_pkg.cflib.crtp
-from .appchannel import Appchannel
-from .commander import Commander
-from .console import Console
-from .extpos import Extpos
-from .localization import Localization
-from .log import Log
-from .mem import Memory
-from .param import Param
-from .platformservice import PlatformService
-from .toccache import TocCache
+import flapper_pkg.cflib.crtp as cflib_crtp
+from flapper_pkg.cflib.crazyflie.appchannel import Appchannel
+from flapper_pkg.cflib.crazyflie.commander import Commander
+from flapper_pkg.cflib.crazyflie.console import Console
+from flapper_pkg.cflib.crazyflie.extpos import Extpos
+from flapper_pkg.cflib.crazyflie.localization import Localization
+from flapper_pkg.cflib.crazyflie.log import Log
+from flapper_pkg.cflib.crazyflie.mem import Memory
+from flapper_pkg.cflib.crazyflie.param import Param
+from flapper_pkg.cflib.crazyflie.platformservice import PlatformService
+from flapper_pkg.cflib.crazyflie.toccache import TocCache
 from flapper_pkg.cflib.crazyflie.high_level_commander import HighLevelCommander
 from flapper_pkg.cflib.utils.callbacks import Caller
 
@@ -222,7 +222,7 @@ class Crazyflie():
         self.state = State.INITIALIZED
         self.link_uri = link_uri
         try:
-            self.link = cflib.crtp.get_link_driver(
+            self.link = cflib_crtp.get_link_driver(
                 link_uri, self._link_quality_cb, self._link_error_cb)
 
             if not self.link:

@@ -28,12 +28,12 @@
 import logging
 import os
 
-from .exceptions import WrongUriType
-from .prrtdriver import PrrtDriver
-from .radiodriver import RadioDriver
-from .serialdriver import SerialDriver
-from .udpdriver import UdpDriver
-from .usbdriver import UsbDriver
+from flapper_pkg.cflib.crtp.exceptions import WrongUriType
+from flapper_pkg.cflib.crtp.prrtdriver import PrrtDriver
+from flapper_pkg.cflib.crtp.radiodriver import RadioDriver
+from flapper_pkg.cflib.crtp.serialdriver import SerialDriver
+from flapper_pkg.cflib.crtp.udpdriver import UdpDriver
+from flapper_pkg.cflib.crtp.usbdriver import UsbDriver
 
 __author__ = 'Bitcraze AB'
 __all__ = []

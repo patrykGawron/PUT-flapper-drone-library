@@ -33,9 +33,9 @@ import queue
 import re
 import threading
 
-from .crtpstack import CRTPPacket
-from .exceptions import WrongUriType
-from cflib.crtp.crtpdriver import CRTPDriver
+from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
+from flapper_pkg.cflib.crtp.exceptions import WrongUriType
+from flapper_pkg.cflib.crtp.crtpdriver import CRTPDriver
 
 found_serial = True
 try:

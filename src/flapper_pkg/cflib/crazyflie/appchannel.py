@@ -26,7 +26,6 @@ Data channel to communicate with an application running in the Crazyflie
 """
 import logging
 
-import flapper_pkg.cflib.crazyflie.platformservice
 from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
 from flapper_pkg.cflib.crtp.crtpstack import CRTPPort
 from flapper_pkg.cflib.utils.callbacks import Caller

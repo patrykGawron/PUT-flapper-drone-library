@@ -34,7 +34,7 @@ import threading
 
 import cflinkcpp
 
-from .crtpstack import CRTPPacket
+from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
 from flapper_pkg.cflib.crtp.crtpdriver import CRTPDriver
 
 __author__ = 'Bitcraze AB'

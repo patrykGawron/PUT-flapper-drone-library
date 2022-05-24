@@ -33,9 +33,8 @@ import math
 import struct
 import time
 
-import flapper_pkg.cflib.crtp
-from .boottypes import Target
-from .boottypes import TargetTypes
+from flapper_pkg.cflib.bootloader.boottypes import Target
+from flapper_pkg.cflib.bootloader.boottypes import TargetTypes
 from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
 
 __author__ = 'Bitcraze AB'

@@ -22,7 +22,7 @@
 import logging
 import struct
 
-from .memory_element import MemoryElement
+from flapper_pkg.cflib.crazyflie.mem.memory_element import MemoryElement
 
 logger = logging.getLogger(__name__)
 

@@ -32,9 +32,9 @@ import socket
 import struct
 from urllib.parse import urlparse
 
-from .crtpdriver import CRTPDriver
-from .crtpstack import CRTPPacket
-from .exceptions import WrongUriType
+from flapper_pkg.cflib.crtp.crtpdriver import CRTPDriver
+from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
+from flapper_pkg.cflib.crtp.exceptions import WrongUriType
 
 __author__ = 'Bitcraze AB'
 __all__ = ['UdpDriver']

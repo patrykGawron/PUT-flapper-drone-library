@@ -4,8 +4,8 @@ import datetime
 import logging
 import re
 
-from .crtpstack import CRTPPacket
-from .exceptions import WrongUriType
+from flapper_pkg.cflib.crtp.crtpstack import CRTPPacket
+from flapper_pkg.cflib.crtp.exceptions import WrongUriType
 from flapper_pkg.cflib.crtp.crtpdriver import CRTPDriver
 prrt_installed = True
 try:

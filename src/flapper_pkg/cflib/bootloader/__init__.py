@@ -39,13 +39,13 @@ from typing import NoReturn
 from typing import Optional
 from typing import Tuple
 
-from .boottypes import BootVersion
-from .boottypes import TargetTypes
-from .cloader import Cloader
-from cflib.crazyflie import Crazyflie
-from cflib.crazyflie.mem import deck_memory
-from cflib.crazyflie.mem import MemoryElement
-from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
+from flapper_pkg.cflib.bootloader.boottypes import BootVersion
+from flapper_pkg.cflib.bootloader.boottypes import TargetTypes
+from flapper_pkg.cflib.bootloader.cloader import Cloader
+from flapper_pkg.cflib.crazyflie import Crazyflie
+from flapper_pkg.cflib.crazyflie.mem import deck_memory
+from flapper_pkg.cflib.crazyflie.mem import MemoryElement
+from flapper_pkg.cflib.crazyflie.syncCrazyflie import SyncCrazyflie
 
 logger = logging.getLogger(__name__)
 
