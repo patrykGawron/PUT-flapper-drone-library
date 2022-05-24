@@ -4,14 +4,13 @@ import sys
 import time
 import csv
 import threading as th
-import cflib.crtp
-from cflib.crazyflie import Crazyflie
-from cflib.crazyflie.log import LogConfig
-from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
-from cflib.crazyflie.syncLogger import SyncLogger
+import flapper_pkg.cflib.crtp
+from flapper_pkg.cflib.crazyflie import Crazyflie
+from flapper_pkg.cflib.crazyflie.log import LogConfig
+from flapper_pkg.cflib.crazyflie.syncCrazyflie import SyncCrazyflie
+from flapper_pkg.cflib.crazyflie.syncLogger import SyncLogger
 from datetime import datetime
-from cflib.utils import uri_helper
-
+from flapper_pkg.cflib.utils import uri_helper
 
 class FlapperController:
     def __init__(self) -> None:

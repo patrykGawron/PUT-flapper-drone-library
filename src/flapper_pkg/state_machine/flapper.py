@@ -13,8 +13,8 @@ def test(self):
 
 drone_graph = nx.MultiDiGraph()
 
-from_tos_filename = "from_tos.yaml" # sys.argv[1]
-options_filename = "options.yaml" # sys.argv[2]
+from_tos_filename = "src/flapper_pkg/state_machine/from_tos.yaml" # sys.argv[1]
+options_filename = "src/flapper_pkg/state_machine/options.yaml" # sys.argv[2]
 with open(options_filename, "r") as file:
     loaded = yaml.load(file, Loader=yaml.FullLoader)
 
