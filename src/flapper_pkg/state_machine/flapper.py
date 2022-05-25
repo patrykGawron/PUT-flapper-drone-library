@@ -3,8 +3,8 @@ import yaml
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from flapper_pkg.state_machine.console import console_interface, testing
-from flapper_pkg.state_machine.generator import Gen, setTransition, generate_states
+from console import console_interface, testing
+from generator import Gen, setTransition, generate_states
 from statemachine import StateMachine, State, Transition
 import importlib.resources as pkg_resources
 import os
@@ -15,9 +15,8 @@ def test(self):
 
 drone_graph = nx.MultiDiGraph()
 
-pkg_files_path = pkg_resources.files('flapper_pkg')
-from_tos_filename = os.path.join(pkg_files_path, "state_machine/from_tos.yaml")   # sys.argv[1]
-options_filename = os.path.join(pkg_files_path, "state_machine/options.yaml") # sys.argv[2]
+from_tos_filename = os.path.join("from_tos.yaml")   # sys.argv[1]
+options_filename = os.path.join("options.yaml") # sys.argv[2]
 
 
 
